@@ -25,9 +25,15 @@ cd localollamaaichat
 ```
 
 ### 2. Install backend dependencies
+Under the root folder
 ```bash
-cd ./backend
-npm install express cors
+npm install
+```
+
+Then Express.js backend
+```bash
+cd backend
+npm install
 ```
 
 Make sure you have Ollama installed:
@@ -39,36 +45,29 @@ Node 18+ includes fetch, so no need to install node-fetch.
 Make sure you have Node.js installed:
 https://nodejs.org/en/download
 
-Then install Angular CLI
+Then install Angular dependencies under the angular-llm-chat folder
 ```bash
-cd ../
-npm install -g @angular/cli
+cd angular-llm-chat
+npm install 
+```
+
+Then install React dependencies under the react-llm-chat folder
+```bash
+cd react-llm-chat
+npm install 
 ```
 
 ---
 
 ## Running the App
-### 1. Start Ollama
-
+### 1. Start with Concurrently
 Make sure Ollama is installed and the DeepSeek-R1 model is available:
 
 ```bash
-ollama run deepseek-r1:32b
-```
-
-### 2. Start Express Backend
-```bash
-cd ./backend
-node app.js
+npm run dev
 ```
 
 Backend will run on http://localhost:3000
-
-### 3. Start React Frontend
-```bash
-cd ./react-llm-chat/src/
-npm run dev
-```
 
 Frontend will run on http://localhost:3001
 

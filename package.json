@@ -1,0 +1,13 @@
+{
+  "name": "local-ai-workspace",
+  "private": true,
+  "scripts": {
+    "ollama": "ollama run deepseek-r1:32b",
+    "backend": "cd backend && node app.js",
+    "frontend": "cd react-llm-chat && npm start",
+    "dev": "concurrently \"npm run ollama\" \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
